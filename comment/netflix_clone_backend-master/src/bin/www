@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+/*Esta línea de comando es importante porque así le estamos diciendo qué va 
+a ejecutar este archivo, con esto le estamos diciendo que lo vamos a correr 
+con node y no el node de nuestra computadora sino el node de docker*/
+
+var server = require('../index');
+/*Con esto estoy importando el módulo index.js que cree en la carpeta src, los 
+bin son archivos binarios que son ejecutables, y debo importarlo con var ahuevo
+porque los bin no lo acpetan de otra manera*/
+
+const PORT = process.env.PORT || 8000;
+
+server.start(() => console.log("Server is running in http://localhost:4000"))
+/*Lo que hace nodemon es leer este archivo*/

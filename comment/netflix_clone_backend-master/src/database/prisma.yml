@@ -1,0 +1,9 @@
+endpoint: https://us1.prisma.sh/diegorko/netflix_clone_backend-master/dev
+#Este es el link para la base de datos, se crea con prisma init en consola.
+datamodel: datamodel.graphql
+
+#Deploy Hook
+
+hooks:
+  post-deploy:
+    - graphql get-schema --project database
